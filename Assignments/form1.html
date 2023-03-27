@@ -1,0 +1,72 @@
+<html>
+
+<body>
+    <!-- FORM-->
+    <form>
+        First Name : <input type="text" id="t1" placeholder="Enter your first name">
+        <br><br>
+        Last Name : <input type="text" id="t2">
+        <br><br>
+        Email Address : <input type="email" id="t3" name="email" required>
+        <br><br>
+        Address : <input type="text" id="t4">
+        <br><br>
+        City : <input type="text" id="t5">
+        <br><br>
+    </form>
+    <!-- Button -->
+    <input type="submit" onclick="userForm()">
+    <input type="reset">
+    <br><br>
+    <!-- Table-->
+    <table border="1" id="mytable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Address</th>
+            <th>City</th>
+
+        </tr>
+
+    </table>
+    <!-- JS code -->
+    <script>
+        function userForm() {
+            let fname = document.getElementById("t1").value
+            let lname = document.getElementById("t2").value
+            let email = document.getElementById("t3").value
+            let address = document.getElementById("t4").value
+            let city = document.getElementById("t5").value
+           
+            let mt = document.getElementById("mytable")
+            let tr1 = document.createElement('tr')
+
+            // let c1 = document.createElement('td')
+            // c1.textContent = fname
+            // tr1.append(c1)
+            // mt.append(tr1)
+
+
+
+            // let t2 = document.createElement('td')
+            // t2.textContent = lname
+            // tr1.append(t2)
+            // mt.append(tr1)
+let arr=[fname, lname, email, address, city];
+            for (let i=0; i<arr.length;i++){
+                let c1 = document.createElement('td')
+    
+               c1.textContent = arr[i]
+        
+            tr1.append(c1)
+            mt.append(tr1)
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
