@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <style>
+            .red{
+                border:  solid;
+                background-color: red;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-left: 100px;
+                margin-right: 100px;
+                /* text-align: center; */
+                padding-right: 10px;
+                text-transform: uppercase;
+            }
+            .yellow{
+                border: 3px solid;
+                background-color: yellow;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-left: 100px;
+                margin-right: 100px;
+                text-align: center;
+                /* padding-right: 10px; */
+                text-transform: lowercase;
+                
+            }
+            .green{
+                border: 5px solid;
+                background-color: green;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-left: 100px;
+                margin-right: 100px;
+                /* text-align: center; */
+                padding-left: 10px;
+                text-transform:capitalize;
+                
+            }
+        </style>
+    <script>
+        function check(ob){
+          
+                op=ob.value
+                // alert(op)
+                let ob2=document.getElementsByClassName('r')
+
+                if(op=="red"){
+                    ob2[0].className="red"  
+                     
+                }  
+                    // alert('in read') 
+                
+                else if(op=="yellow")
+                {
+                    ob2[0].className="yellow" 
+                     
+                }  
+                
+                else if(op=="green"){
+                    ob2[0].className="green" 
+                     
+                } 
+                
+            }
+     
+    </script>
+       
+    </head>
+    <body>
+        <div class="r">
+        <p>
+            A full-stack developer is a developer or engineer who 
+            can build both the front end and the back end of a website. 
+            The front end (the parts of a website a user sees and interacts with) 
+            and the back end (the behind-the-scenes data storage and processing) 
+            require different skill sets.
+        </p>
+    </div>
+        <div class="r">
+        <p>
+            This is P2
+        </p>
+    </div>
+
+
+       <div class="r">
+           <p>
+                This is P3
+            </p>
+        </div>
+    
+      
+        <input type ="radio"  value="red" id="r1" name="op" onclick=check(this)>RED
+        <br>
+        <input type ="radio" value="green" id="r2" name="op" onclick=check(this)>GREEN
+        <br>
+        <input type ="radio" value="yellow" id="r3" name="op" onclick=check(this)>YELLOW
+        
+    </body>
+</html>
